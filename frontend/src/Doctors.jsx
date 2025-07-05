@@ -10,7 +10,7 @@ function Doctors() {
 
   const totaldocs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/v1/doctors");
+      const res = await axios.get("https://hospitalmanagement-mern.onrender.com/api/v1/doctors");
       setAllDoctors(res.data.doctorsdata);
       setdocslist(res.data.doctorsdata);
     } catch (err) {
@@ -26,7 +26,7 @@ function Doctors() {
 
   const deletion = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/doctors/${id}`);
+      await axios.delete(`https://hospitalmanagement-mern.onrender.com/api/v1/doctors/${id}`);
       totaldocs();
     } catch (err) {
       console.log(err);
