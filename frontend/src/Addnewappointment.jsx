@@ -15,7 +15,7 @@ function Addnewappointment(){
 
     const getdoctorsdata=async()=>{
         try{
-            const res=await axios.get("http://localhost:5000/api/v1/doctors");
+            const res=await axios.get("https://hospitalmanagement-mern.onrender.com/api/v1/doctors");
             const doctorsdata=res.data.doctorsdata;
             setdoctors(doctorsdata);
         }
@@ -26,7 +26,7 @@ function Addnewappointment(){
 
     const getpatientsdata=async()=>{
         try{
-            const res=await axios.get("http://localhost:5000/api/v1/patients");
+            const res=await axios.get("https://hospitalmanagement-mern.onrender.com/api/v1/patients");
             const patientsdata=res.data.patientdata;
             setpatients(patientsdata);
         }
@@ -38,7 +38,7 @@ function Addnewappointment(){
 
     const bookappointment=async()=>{
         try{
-            await axios.post("http://localhost:5000/api/v1/appointments",{id,date,patient_name,doctor_name,status});
+            await axios.post("https://hospitalmanagement-mern.onrender.com/api/v1/appointments",{id,date,patient_name,doctor_name,status});
             alert("appointment booked successfully");
             setid("");
             setpatname("");

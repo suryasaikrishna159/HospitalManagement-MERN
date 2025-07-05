@@ -10,7 +10,7 @@ function Appointments() {
 
   const fetchAppointments = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/v1/appointments');
+      const res = await axios.get('https://hospitalmanagement-mern.onrender.com/api/v1/appointments');
       const data = res.data.appointmentsdata;
       setAllAppointments(data);
       setFilteredAppointments(data); 
@@ -21,7 +21,7 @@ function Appointments() {
 
   const deletion = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/appointments/${id}`);
+      await axios.delete(`https://hospitalmanagement-mern.onrender.com/api/v1/appointments/${id}`);
       fetchAppointments();
     } catch (err) {
       console.log(err);

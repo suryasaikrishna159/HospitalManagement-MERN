@@ -14,7 +14,7 @@ function Hospmanagesys(){
     useEffect(()=>{
         const findtotaldocs=async ()=>{
             try{
-                const n = await axios.get("http://localhost:5000/api/v1/doctors");
+                const n = await axios.get("https://hospitalmanagement-mern.onrender.com/api/v1/doctors");
                 const len=n.data.doctorsdata.length;
                 settotaldocs(len);
             }
@@ -24,7 +24,7 @@ function Hospmanagesys(){
         }
         const findtotalpatients=async ()=>{
             try{
-                const n = await axios.get("http://localhost:5000/api/v1/patients");
+                const n = await axios.get("https://hospitalmanagement-mern.onrender.com/api/v1/patients");
                 const len=n.data.patientdata.length;
                 settotalpatients(len);
             }
@@ -34,7 +34,7 @@ function Hospmanagesys(){
         }
         const findtotalappointments=async ()=>{
             try{
-                const n = await axios.get("http://localhost:5000/api/v1/appointments");
+                const n = await axios.get("https://hospitalmanagement-mern.onrender.com/api/v1/appointments");
                 const len=n.data.appointmentsdata.length;
                 settotalappointments(len);
             }
@@ -44,7 +44,7 @@ function Hospmanagesys(){
         }
         const findtotalappointmentstoday = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/v1/appointments");
+                const res = await axios.get("https://hospitalmanagement-mern.onrender.com/api/v1/appointments");
                 const appointments = res.data.appointmentsdata;
                 setappointments(appointments);
 
