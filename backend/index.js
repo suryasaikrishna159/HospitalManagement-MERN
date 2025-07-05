@@ -3,7 +3,7 @@ const cors=require("cors");
 const app=express();
 
 app.use(express.json());
-const cors = require("cors");
+
 
 const allowedOrigins = [
   "https://hospitalmanagement-mern-frontend.onrender.com"
