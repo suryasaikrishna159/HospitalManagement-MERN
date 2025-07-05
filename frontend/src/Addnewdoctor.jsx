@@ -9,7 +9,7 @@ function Addnewdoctor() {
 
   const adddoctor = async () => {
     try {
-      await axios.post("http://localhost:5000/api/v1/doctors", {id,name:`Dr. ${name}`,specialization,email});
+      await axios.post("https://hospitalmanagement-mern.onrender.com/api/v1/doctors", {id,name:`Dr. ${name}`,specialization,email});
       alert("Doctor added successfully!");
       setid(0);
       setname("");
